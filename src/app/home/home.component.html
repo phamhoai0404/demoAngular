@@ -1,0 +1,49 @@
+<h1>home works!</h1>
+<h1>Hello World</h1>
+<h3 class= "contents">Đây là project đầu tiên dùng Angular 9</h3>
+
+<!-- Ví dụ pipe uppercase chuyển thành chữ hoa  -->
+<!-- pipe của tuổi chuyển về dạng số có ít nhất 0 kí tự đằng sau dấu chấm và nhiều nhất là 3 kí tự sau dấu chấm  -->
+<h2> Chào bạn {{name | uppercase}}</h2>
+<h2>Sinh năm {{age | number: "1.0-3"}}</h2>
+
+<!-- if của Angular cứ thấy sao sao ấy vì không nhúng được css vào cơ -->
+<span *ngIf= "age <= 2000; then luachon1; else luachon2"></span>
+<ng-template #luachon1 class ="under">Bạn còn trẻ</ng-template>
+<ng-template #luachon2  class ="old">Bạn đã già</ng-template>
+<br>
+<input  [(ngModel)]= "name" /> 
+<!-- MyBold là directive được khai báo ở trong Directives và được định nghĩa ở trong đấy rồi -->
+<button (click) = "tangTuoi()" MyBold>Tăng tuổi</button>
+<button (click) = "giamTuoi()">Giảm tuổi</button>
+
+
+
+<!-- Cách if này chạy chậm hơn và lâu hơn do nó kiểm tra hai lần  -->
+<!-- Đây là if của Angular -->
+<!-- <h2 *ngIf= "age > 2000"> Bạn đã già </h2>
+<h2 *ngIf= "age <= 2000">Bạn vẫn còn trẻ</h2> -->
+
+<!-- <div *ngFor="let it of cars">
+    <li>{{it}}</li>
+</div> -->
+<!-- Như này thay thế cho cái trên mới chuẩn nè  -->
+<div >
+    <div>
+        Xinh giái
+    </div>
+    <li *ngFor="let it of cars" >{{it}}</li>
+</div>
+
+<select>
+    <option *ngFor="let ite of cars">{{ite}}</option>
+</select>
+<div class="row">
+    <div class="col-md-4">
+        <app-form></app-form>
+    </div>>
+    
+</div>
+
+
+
